@@ -1,0 +1,10 @@
+#!/bin/sh
+
+root_dir=$(readlink -f $(dirname $0)/..)
+jar=$(find $root_dir -name 'pshot-*.jar')
+
+exec java -Droot_dir=$root_dir \
+          -cp $jar:$root_dir/conf \
+	  -XX:+UseG1GC \
+	  pshot.Main \
+	  "$@"
