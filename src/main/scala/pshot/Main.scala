@@ -21,7 +21,7 @@ object Main extends App {
 
   val dirNameFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd")
 
-  val fileNameFormatter = DateTimeFormatter.ofPattern("HH:mm:ss")
+  val fileNameFormatter = DateTimeFormatter.ofPattern("HH:mm:ss.SSS")
 
   def takeScreenshot(robot: Robot, rect: Rectangle, root: File,
                      format: String): Unit = {
