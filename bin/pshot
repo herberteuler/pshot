@@ -1,5 +1,6 @@
 #!/bin/sh
 
+set -x
 root_dir=$(readlink -f $(dirname $0)/..)
 jar=$(find $root_dir -name 'pshot-*.jar')
 

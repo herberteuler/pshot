@@ -45,7 +45,7 @@ object Main extends App {
   val rect = new Rectangle(Toolkit.getDefaultToolkit.getScreenSize)
   val root = conf.get[File]("pshot.root").toOption.get
   val format = conf.get[String]("pshot.format").toOption.get
-  val period = conf.get[Int]("pshot.period-mins").toOption.get * 60000
+  val period = conf.get[Int]("pshot.period-secs").toOption.get * 1000
   timer.scheduleAtFixedRate(takeScreenshot(robot, rect, root, format), 0, period)
 
   val latch = {
