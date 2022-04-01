@@ -2,7 +2,7 @@ lazy val pshot = (project in file("."))
   .settings(
      name := "pshot",
      version := "0.1-SNAPSHOT",
-     scalaVersion := "2.12.1",
+     scalaVersion := "2.13.8",
      scalacOptions ++= Seq("-deprecation", "-explaintypes", "-feature",
                            "-unchecked", "-Xfuture", "-Xlint"),
      assemblyMergeStrategy in assembly := {
@@ -12,6 +12,6 @@ lazy val pshot = (project in file("."))
          old(x)
      },
      libraryDependencies ++= Seq(
-       "com.github.kxbmap" %% "configs" % "0.4.4"
+       "com.github.kxbmap" %% "configs" % "0.6.1"
      )
    )
